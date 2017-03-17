@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    image: elixir
+    command: mix test --cover --trace --color
+    environment:
+      - MIX_ENV=test
+    working_dir: /usr/local/src
+    volumes:
+      - $PWD:/usr/local/src
